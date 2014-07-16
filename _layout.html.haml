@@ -1,0 +1,33 @@
+!!! 5
+%html.no-js{ :lang => "zh-TW" }
+  %head
+
+    -# head setting
+    %meta{ :charset => "utf-8" }
+    %title untitled project
+    -# render "/partials/favicon"
+
+    -# meta
+    = render "/partials/viewport"
+    -#= render "/partials/fb-og"
+
+    -# css
+    = render "/partials/site-css"
+
+    -# ie hack
+    = render "/vender/html5shim"
+
+  %body
+    #wrapper
+      %header
+      %main
+        = yield
+      %footer
+    -# javascripts
+    = render "/vender/jquery-cdn"
+    = render "/partials/site-js"
+
+    -# 3rd webfont
+    -#= render "/vender/typekit"
+    -#= render "/vender/justfont"
+    = livereload_js
